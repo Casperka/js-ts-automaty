@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zkousky javascriptu</title>
+</head>
+<body>
+    <p id="button"></p>
+
+    <button onclick="gotU()">Click me!</button>
+    <script>
+        function gotU() {
+            document.getElementById("button").innerHTML = "Ha, got u bitch!"
+        }
+    </script>
+
+    <p id="object"></p>
+   <script>
+        const info = {
+            name: "Nikola",
+            surname: "Semrádová",
+            age: 27,
+            animal: "Panda",
+    }
+    document.getElementById("object").innerHTML = "My name is" + " " + info.name + " " + info.surname
+    </script>
+</body>
+</html>
