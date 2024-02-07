@@ -1,27 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Zkousky javascriptu</title>
-</head>
-<body>
+  </head>
+  <body>
     <p id="button"></p>
 
     <button onclick="gotU()">Click me!</button>
     <script>
-        function gotU() {
-            document.getElementById("button").innerHTML = "Ha, got u bitch!"
-        }
+      function gotU() {
+        document.getElementById("button").innerHTML = "Ha, got u bitch!";
+      }
     </script>
 
     <p id="object"></p>
-   <script>
-        const info = {
-            name: "Nikola",
-            surname: "Semrádová",
-            age: 27,
-            animal: "Panda",
-    }
-    document.getElementById("object").innerHTML = "My name is" + " " + info.name + " " + info.surname
+    <script>
+      const info = {
+        name: "Nikola",
+        surname: "Semrádová",
+        age: 27,
+        animal: "Panda",
+      };
+      document.getElementById("object").innerHTML =
+        "My name is" + " " + info.name + " " + info.surname;
     </script>
-</body>
+    <p id="time"></p>
+    <button onclick="document.getElementById('time').innerHTML = Date()">
+      Show me the time!
+    </button>
+
+    <p id="mouseover">Bye, bye</p>
+    <button onmouseover="document.getElementById('mouseover').innerHTML='Hi!'">
+      Hover me
+    </button>
+    <p id="uppercase">I'm so big!</p>
+    <script>
+      let text = document.getElementById("uppercase").innerHTML;
+      document.getElementById("uppercase").innerHTML = text.toUpperCase();
+    </script>
+    <p id="concat"></p>
+    <script>
+      let firstWord = "Hug";
+      let secondWord = "me";
+      let result = firstWord.concat(" ", secondWord);
+      document.getElementById("concat").innerHTML = result;
+    </script>
+    <p id="hehe"></p>
+    <p id="yep"></p>
+    <script>
+      let sentence = "Lollipop";
+      let hihi = sentence.slice(0, 3);
+      document.getElementById("hehe").innerHTML = hihi;
+      let at = sentence.at(5);
+      document.getElementById("yep").innerHTML = at;
+    </script>
+  </body>
 </html>
