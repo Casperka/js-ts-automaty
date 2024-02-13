@@ -54,5 +54,33 @@
       let at = sentence.at(5);
       document.getElementById("yep").innerHTML = at;
     </script>
+    <p id="alias"></p>
+    <script>
+      let name = "Nikola";
+      let alias = "Mickys";
+      let names = `My name is ${name} and my nickname is ${alias}.`;
+      document.getElementById("alias").innerHTML = names;
+    </script>
+    <p id="array"></p>
+    <p id="colors"></p>
+    <script>
+      const array = ["Blue", "Yellow", "Green"];
+      document.getElementById("array").innerHTML = array;
+      let favouriteColors =
+        "My favourite color is " + array[0] + " but not " + array[2];
+      document.getElementById("colors").innerHTML = favouriteColors;
+    </script>
+    <p id="fruits"></p>
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.push("Melon");
+      document.getElementById("fruits").innerHTML = fruits;
+    </script>
+    <p id="fruits2"></p>
+    <script>
+      const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+      fruits.pop();
+      document.getElementById("fruits2").innerHTML = fruits2;
+    </script>
   </body>
 </html>
