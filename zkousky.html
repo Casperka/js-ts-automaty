@@ -82,5 +82,61 @@
       fruits.pop();
       document.getElementById("fruits2").innerHTML = fruits2;
     </script>
+    <p id="math"></p>
+    <script>
+      let minimum = Math.min(-5, 10, -66, 15);
+      document.getElementById("math").innerHTML = minimum;
+    </script>
+    <input id="age" value="15" />
+    <button onclick="areYouTooYoung()">Can you vote?</button>
+    <p id="vote"></p>
+    <script>
+      function areYouTooYoung() {
+        let age = document.getElementById("age").value;
+        let voteAble = age < 18 ? "Too young" : "Old enough";
+        document.getElementById("vote").innerHTML = voteAble;
+      }
+    </script>
+    <p id="greetings"></p>
+    <script>
+      const hour = new Date().getHours();
+
+      if (hour < 12) {
+        greeting = "Good morning";
+      } else if (hour < 18) {
+        greeting = "Good day";
+      } else {
+        greeting = "Good evening";
+      }
+      document.getElementById("greetings").innerHTML = greeting;
+    </script>
+    <p>What day it is?</p>
+    <p id="days"></p>
+    <script>
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+          break;
+      }
+      document.getElementById("days").innerHTML = day;
+    </script>
   </body>
 </html>
